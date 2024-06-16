@@ -1,0 +1,1026 @@
+{
+	"info": {
+		"_postman_id": "a0869932-9693-45a1-b239-0f934c094446",
+		"name": "API de Contas Bancárias",
+		"description": "Documentação da API de Contas Bancárias versão 1\n\nContact Support:\n Name: Suporte\n Email: support@banking.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9470423"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "v1",
+					"item": [
+						{
+							"name": "contas",
+							"item": [
+								{
+									"name": "{id}",
+									"item": [
+										{
+											"name": "Atualizar uma conta existente",
+											"request": {
+												"auth": {
+													"type": "oauth2",
+													"oauth2": [
+														{
+															"key": "password",
+															"value": "normal@123",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "devnormal",
+															"type": "string"
+														},
+														{
+															"key": "client_authentication",
+															"value": "header",
+															"type": "string"
+														},
+														{
+															"key": "grant_type",
+															"value": "password_credentials",
+															"type": "string"
+														},
+														{
+															"key": "refreshTokenUrl",
+															"value": "https://auth-dev.princeton-lemitar.com.br/realms/princeton-lemitar/protocol/openid-connect/token",
+															"type": "string"
+														},
+														{
+															"key": "scope",
+															"value": "user-sinple-web-roles",
+															"type": "string"
+														},
+														{
+															"key": "clientSecret",
+															"value": "ZzVCevKWN9kQ1SNjahS6HhQ6yB4bqdc6",
+															"type": "string"
+														},
+														{
+															"key": "clientId",
+															"value": "sinple-web",
+															"type": "string"
+														},
+														{
+															"key": "accessTokenUrl",
+															"value": "https://auth-dev.princeton-lemitar.com.br/realms/princeton-lemitar/protocol/openid-connect/token",
+															"type": "string"
+														},
+														{
+															"key": "tokenName",
+															"value": "princenton-keycloack",
+															"type": "string"
+														},
+														{
+															"key": "addTokenTo",
+															"value": "header",
+															"type": "string"
+														}
+													]
+												},
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"id\": 1,\n    \"bancoId\": 1,\n    \"conta\": \"1234567891\",\n    \"beneficiario\": \"Jose Silva\",\n    \"saldo\": 2000.00\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/contas/1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"contas",
+														"1"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															},
+															{
+																"key": "Authorization",
+																"value": "<token>",
+																"description": "Added as a part of security scheme: oauth2"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"id\": \"<long>\",\n  \"bancoId\": \"<long>\",\n  \"conta\": \"<string>\",\n  \"beneficiario\": \"<string>\",\n  \"saldo\": \"<number>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/contas/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"contas",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"id\": \"<long>\",\n  \"bancoId\": \"<long>\",\n  \"conta\": \"<string>\",\n  \"beneficiario\": \"<string>\",\n  \"saldo\": \"<number>\"\n}"
+												}
+											]
+										},
+										{
+											"name": "Deletar uma conta por ID",
+											"request": {
+												"auth": {
+													"type": "oauth2",
+													"oauth2": [
+														{
+															"key": "password",
+															"value": "normal@123",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "devnormal",
+															"type": "string"
+														},
+														{
+															"key": "client_authentication",
+															"value": "header",
+															"type": "string"
+														},
+														{
+															"key": "grant_type",
+															"value": "password_credentials",
+															"type": "string"
+														},
+														{
+															"key": "refreshTokenUrl",
+															"value": "https://auth-dev.princeton-lemitar.com.br/realms/princeton-lemitar/protocol/openid-connect/token",
+															"type": "string"
+														},
+														{
+															"key": "scope",
+															"value": "user-sinple-web-roles",
+															"type": "string"
+														},
+														{
+															"key": "clientSecret",
+															"value": "ZzVCevKWN9kQ1SNjahS6HhQ6yB4bqdc6",
+															"type": "string"
+														},
+														{
+															"key": "clientId",
+															"value": "sinple-web",
+															"type": "string"
+														},
+														{
+															"key": "accessTokenUrl",
+															"value": "https://auth-dev.princeton-lemitar.com.br/realms/princeton-lemitar/protocol/openid-connect/token",
+															"type": "string"
+														},
+														{
+															"key": "tokenName",
+															"value": "princenton-keycloack",
+															"type": "string"
+														},
+														{
+															"key": "addTokenTo",
+															"value": "header",
+															"type": "string"
+														}
+													]
+												},
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/contas/2",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"contas",
+														"2"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Authorization",
+																"value": "<token>",
+																"description": "Added as a part of security scheme: oauth2"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/contas/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"contas",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "Criar uma nova conta",
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "password",
+													"value": "normal@123",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "devnormal",
+													"type": "string"
+												},
+												{
+													"key": "client_authentication",
+													"value": "header",
+													"type": "string"
+												},
+												{
+													"key": "grant_type",
+													"value": "password_credentials",
+													"type": "string"
+												},
+												{
+													"key": "refreshTokenUrl",
+													"value": "https://auth-dev.princeton-lemitar.com.br/realms/princeton-lemitar/protocol/openid-connect/token",
+													"type": "string"
+												},
+												{
+													"key": "scope",
+													"value": "user-sinple-web-roles",
+													"type": "string"
+												},
+												{
+													"key": "clientSecret",
+													"value": "ZzVCevKWN9kQ1SNjahS6HhQ6yB4bqdc6",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"value": "sinple-web",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "https://auth-dev.princeton-lemitar.com.br/realms/princeton-lemitar/protocol/openid-connect/token",
+													"type": "string"
+												},
+												{
+													"key": "tokenName",
+													"value": "princenton-keycloack",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"disabled": true
+											},
+											{
+												"key": "Accept",
+												"value": "*/*",
+												"disabled": true
+											},
+											{
+												"key": "",
+												"value": "",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"bancoId\": 1,\n    \"conta\": \"1234567890\",\n    \"beneficiario\": \"Jose Silva\",\n    \"saldo\": 1000.00\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/contas",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"contas"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"key": "Authorization",
+														"value": "<token>",
+														"description": "Added as a part of security scheme: oauth2"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"id\": \"<long>\",\n  \"bancoId\": \"<long>\",\n  \"conta\": \"<string>\",\n  \"beneficiario\": \"<string>\",\n  \"saldo\": \"<number>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/contas",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"contas"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"bancoId\": \"<long>\",\n  \"conta\": \"<string>\",\n  \"beneficiario\": \"<string>\",\n  \"saldo\": \"<number>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Listar Todas as Contas",
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												},
+												{
+													"key": "client_authentication",
+													"value": "header",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "admin@123",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "devadmin",
+													"type": "string"
+												},
+												{
+													"key": "grant_type",
+													"value": "password_credentials",
+													"type": "string"
+												},
+												{
+													"key": "refreshTokenUrl",
+													"value": "https://auth-dev.princeton-lemitar.com.br/realms/princeton-lemitar/protocol/openid-connect/token",
+													"type": "string"
+												},
+												{
+													"key": "scope",
+													"value": "user-sinple-web-roles",
+													"type": "string"
+												},
+												{
+													"key": "clientSecret",
+													"value": "ZzVCevKWN9kQ1SNjahS6HhQ6yB4bqdc6",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"value": "sinple-web",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "https://auth-dev.princeton-lemitar.com.br/realms/princeton-lemitar/protocol/openid-connect/token",
+													"type": "string"
+												},
+												{
+													"key": "tokenName",
+													"value": "princenton-keycloack",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/contas",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"contas"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"key": "Authorization",
+														"value": "<token>",
+														"description": "Added as a part of security scheme: oauth2"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/contas/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"contas",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"bancoId\": \"<long>\",\n  \"conta\": \"<string>\",\n  \"beneficiario\": \"<string>\",\n  \"saldo\": \"<number>\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "transferencias",
+							"item": [
+								{
+									"name": "Listar todas as transferências",
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "password",
+													"value": "normal@123",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "devnormal",
+													"type": "string"
+												},
+												{
+													"key": "client_authentication",
+													"value": "header",
+													"type": "string"
+												},
+												{
+													"key": "grant_type",
+													"value": "password_credentials",
+													"type": "string"
+												},
+												{
+													"key": "refreshTokenUrl",
+													"value": "https://auth-dev.princeton-lemitar.com.br/realms/princeton-lemitar/protocol/openid-connect/token",
+													"type": "string"
+												},
+												{
+													"key": "scope",
+													"value": "user-sinple-web-roles",
+													"type": "string"
+												},
+												{
+													"key": "clientSecret",
+													"value": "ZzVCevKWN9kQ1SNjahS6HhQ6yB4bqdc6",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"value": "sinple-web",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "https://auth-dev.princeton-lemitar.com.br/realms/princeton-lemitar/protocol/openid-connect/token",
+													"type": "string"
+												},
+												{
+													"key": "tokenName",
+													"value": "princenton-keycloack",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/transferencias?contaId=2&startDate=2023-05-01&endDate=2023-06-01",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"transferencias"
+											],
+											"query": [
+												{
+													"key": "contaId",
+													"value": "2"
+												},
+												{
+													"key": "startDate",
+													"value": "2023-05-01"
+												},
+												{
+													"key": "endDate",
+													"value": "2023-06-01"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"key": "Authorization",
+														"value": "<token>",
+														"description": "Added as a part of security scheme: oauth2"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/transferencias?contaId=<long>&startDate=<date>&endDate=<date>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"transferencias"
+													],
+													"query": [
+														{
+															"key": "contaId",
+															"value": "<long>"
+														},
+														{
+															"key": "startDate",
+															"value": "<date>"
+														},
+														{
+															"key": "endDate",
+															"value": "<date>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"id\": \"<uuid>\",\n    \"data\": \"<date>\",\n    \"origemId\": \"<long>\",\n    \"destinoId\": \"<long>\",\n    \"valor\": \"<number>\"\n  },\n  {\n    \"id\": \"<uuid>\",\n    \"data\": \"<date>\",\n    \"origemId\": \"<long>\",\n    \"destinoId\": \"<long>\",\n    \"valor\": \"<number>\"\n  }\n]"
+										}
+									]
+								},
+								{
+									"name": "Criar uma nova transferência",
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "password",
+													"value": "normal@123",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "devnormal",
+													"type": "string"
+												},
+												{
+													"key": "client_authentication",
+													"value": "header",
+													"type": "string"
+												},
+												{
+													"key": "grant_type",
+													"value": "password_credentials",
+													"type": "string"
+												},
+												{
+													"key": "refreshTokenUrl",
+													"value": "https://auth-dev.princeton-lemitar.com.br/realms/princeton-lemitar/protocol/openid-connect/token",
+													"type": "string"
+												},
+												{
+													"key": "scope",
+													"value": "user-sinple-web-roles",
+													"type": "string"
+												},
+												{
+													"key": "clientSecret",
+													"value": "ZzVCevKWN9kQ1SNjahS6HhQ6yB4bqdc6",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"value": "sinple-web",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "https://auth-dev.princeton-lemitar.com.br/realms/princeton-lemitar/protocol/openid-connect/token",
+													"type": "string"
+												},
+												{
+													"key": "tokenName",
+													"value": "princenton-keycloack",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"data\": \"2023-06-01\",\n  \"origemId\": 2,\n  \"destinoId\": 3,\n  \"valor\": 500.00\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/transferencias",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"transferencias"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"key": "Authorization",
+														"value": "<token>",
+														"description": "Added as a part of security scheme: oauth2"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"id\": \"<uuid>\",\n  \"data\": \"<date>\",\n  \"origemId\": \"<long>\",\n  \"destinoId\": \"<long>\",\n  \"valor\": \"<number>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/transferencias",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"transferencias"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<uuid>\",\n  \"data\": \"<date>\",\n  \"origemId\": \"<long>\",\n  \"destinoId\": \"<long>\",\n  \"valor\": \"<number>\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "auth",
+							"item": [
+								{
+									"name": "Obter Token",
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": [
+												{
+													"key": "client_authentication",
+													"value": "header",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "admin@123",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "devadmin",
+													"type": "string"
+												},
+												{
+													"key": "grant_type",
+													"value": "password_credentials",
+													"type": "string"
+												},
+												{
+													"key": "refreshTokenUrl",
+													"value": "https://auth-dev.princeton-lemitar.com.br/realms/princeton-lemitar/protocol/openid-connect/token",
+													"type": "string"
+												},
+												{
+													"key": "scope",
+													"value": "user-sinple-web-roles",
+													"type": "string"
+												},
+												{
+													"key": "clientSecret",
+													"value": "ZzVCevKWN9kQ1SNjahS6HhQ6yB4bqdc6",
+													"type": "string"
+												},
+												{
+													"key": "clientId",
+													"value": "sinple-web",
+													"type": "string"
+												},
+												{
+													"key": "accessTokenUrl",
+													"value": "https://auth-dev.princeton-lemitar.com.br/realms/princeton-lemitar/protocol/openid-connect/token",
+													"type": "string"
+												},
+												{
+													"key": "tokenName",
+													"value": "princenton-keycloack",
+													"type": "string"
+												},
+												{
+													"key": "addTokenTo",
+													"value": "header",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "https://auth-dev.princeton-lemitar.com.br/realms/princeton-lemitar/protocol/openid-connect/token",
+											"protocol": "https",
+											"host": [
+												"auth-dev",
+												"princeton-lemitar",
+												"com",
+												"br"
+											],
+											"path": [
+												"realms",
+												"princeton-lemitar",
+												"protocol",
+												"openid-connect",
+												"token"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "scope",
+				"value": "user-sinple-web-roles",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "https://auth-dev.princeton-lemitar.com.br/realms/princeton-lemitar/protocol/openid-connect/token",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "https://auth-dev.princeton-lemitar.com.br/realms/princeton-lemitar/protocol/openid-connect/auth",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "authorization_code",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}
